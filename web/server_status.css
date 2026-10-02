@@ -1,0 +1,41 @@
+
+#widget-server {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
+.server-status {
+    font-family: 'MinecraftiaRegular', 'Courier New', monospace;
+    padding: 5px;
+    width: 80vw;
+	max-width: 600px;
+	min-width: 350px;
+    background-color: #00000080;
+    border: 3px solid #aaaaaaaa;
+    cursor: pointer;
+	user-select: none;
+}
+
+.server-status:hover {
+    background-color: #000000aa;
+    border: 3px solid #aaaaaaff;
+}
+
+.server-status-icon,.server-icon {
+	width: 64px;
+	height: 64px;
+}
+
+.server-status .container {
+	gap: 10px;
+}
+
+.server-status-meta .status-online {
+	height: 24px;
+	width: auto;
+    image-rendering: pixelated;
+}
+
+.server-status-body .server-motd .motd-error {
+	color: darkred;
+}

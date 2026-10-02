@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VOFI - Minecraft Server</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/>
+	<link href="./styles.css" rel="stylesheet" />
+	<link href="./snackbar.css" rel="stylesheet" />
+	<link href="./server_status.css" rel="stylesheet" />
+</head>
+<body class="container flex-center">
+	<div id="widget-server" class="server-status">
+		<div class="container horizontal">
+			<div class="item server-status-icon">
+				<img class="server-icon" src="./server-icon.png" />
+			</div>
+			<div class="item flex-grow server-status-body">
+				<div class="server-name">
+					<span class="label">mc.luminight.dev</span>
+					<i class="fa-solid fa-copy"></i>
+				</div>
+				<div class="server-motd"></div>
+			</div>
+			<div class="item server-status-meta container flex-align-end">
+				<img class="status-online" src="./ping.loading.gif"></img>
+				<div class="player-count"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="paper container">
+		<h2>Voice Chat</h2>
+		<div class="alert info">
+			<i class="fa-solid fa-circle-info" style="color: lightblue"></i>
+			You can still join with a vanilla client, but the voice chat won't work.
+		</div>
+		<ol style="margin-left: 20px; margin-bottom: 12px; padding-left: 25px;">
+			<li>
+				Install <a href="https://prismlauncher.org/" target="_blank">Prism Launcher</a> 
+				<div>
+					<strong>Note:</strong> You could use other launchers, but I found PrismLauncher to be the easiest to use
+				</div>
+			</li>
+			<li>Link your Minecraft account</li>
+			<li>Drag & drop the <a href="./VOFI.mrpack" download><code>VOFI.mrpack</code></a> modpack into the launcher to create the instance.</li>
+			<li>Join the server, then setup voice chat in-game.</li>
+		</ol>
+		<a class="button download" href="./VOFI.mrpack" download>Download VOFI.mrpack</a>
+	</div>
+
+	<div class="paper container">
+		<h2>Resource Pack</h2>
+		<p>
+			You can pick a bunch of really cool vanilla tweaks and generate a resource pack. Completely optional, but worth taking a look:
+		</p>
+		<a href="https://vanillatweaks.net/picker/resource-packs/" target="_blank">
+			<img class="img-button" src="./vanilla-tweak-resource.png" />
+		</a>
+	</div>
+
+	<div class="paper container">
+		<h2>Server-side Datapacks</h2>
+		<p>
+			Here is a list of tweaks the server includse.
+			The aim was to keep everything feel like vanilla,
+			but extend it with features that <i>should be</i> in the game
+		</p>
+		<ul class="dp-list" style="margin-left: 20px; margin-bottom: 8px; padding-left: 0;">
+			<li>
+				<a class="dp-title" href="https://minecraft.wiki/w/Minecart_Improvements" target="_blank">
+					Minecart Improvements
+				</a>
+				<span class="dp-desc">
+					Changes behavior of minecarts, allowing them to move faster and more smoothly (among other changes).
+				</span>
+			</li>
+			<li>
+				<a class="dp-title" href="https://minecraft.wiki/w/Villager Trade Rebalance" target="_blank">
+					Villager Trade Rebalance
+				</a>
+				<span class="dp-desc">
+					Tweaks the trades of several villager professions and wandering traders in an attempt to make them more fair.
+				</span>
+			</li>
+				<li>
+					<span class="dp-title">Armor Statues</span>
+					<span class="dp-desc"> Adds a unique book that allows you to alter the properties of armor stands in survival.</span>
+				</li>
+				<li>
+					<span class="dp-title">Mini Blocks</span>
+					<span class="dp-desc"> Use a stonecutter to craft certain blocks into mini blocks (heads textured like blocks).</span>
+				</li>
+				<li>
+					<span class="dp-title">More Mob Heads</span>
+					<span class="dp-desc"> Adds a chance to receive a mob's head upon killing it.</span>
+				</li>
+				<li>
+					<span class="dp-title">Player Head Drops</span>
+					<span class="dp-desc"> A player will drop their head when killed by another player. The item displays who the killer is.</span>
+				</li>
+				<li>
+					<span class="dp-title">Silence Mobs</span>
+					<span class="dp-desc"> Adds the ability to silence mobs using a name tag. 'Silence me'; 'silence me'; 'silence_me' are all acceptable names.</span>
+				</li>
+				<li>
+					<span class="dp-title">Painting Picker</span>
+					<span class="dp-desc"> Use a stonecutter to choose a painting's variant.</span>
+				</li>
+				<li>
+					<span class="dp-title">Storm Channeling</span>
+					<span class="dp-desc"> Start a thunderstorm by throwing a Channeling trident upward from the top of the world, consuming 150 (60%) durability.</span>
+				</li>
+				<li>
+					<span class="dp-title">AFK Display</span>
+					<span class="dp-desc"> Greys out a player's name that is not moving for 5 minutes.</span>
+				</li>
+				<li>
+					<span class="dp-title">Universal Dyeing</span>
+					<span class="dp-desc"> Allows you to dye any dyeable block to another color, no matter what color it is (does not include Concrete).</span>
+				</li>
+			<!-- <li><strong></strong> - </li> -->
+		</ul>
+	</div>
+	<div class="footer">What the dog doin?</div>
+	<script src="./config.js"></script>
+	<script src="./helpers.js"></script>
+	<script src="./snackbar.js"></script>
+	<script src="./server_status.js"></script>
+</body>
+</html>
