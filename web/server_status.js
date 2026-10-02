@@ -10,7 +10,8 @@ function queryWidget(selector, ip) {
 	const elemMotd = widget.querySelector(".server-motd");
 	const elemIcon = widget.querySelector(".server-icon");
 	const elemOnline = widget.querySelector(".status-online");
-	const elemPlayers = widget.querySelector(".player-count");
+	const elemPlayers = widget.querySelector(".players .count");
+	const elemPlayersTooltip = widget.querySelector(".players .tooltip-text");
 
 	const ONLINE_MAP = {
 		[STATUS.LOADING]: "./ping.loading.gif",
@@ -30,6 +31,15 @@ function queryWidget(selector, ip) {
 			} else if (!silent) {
 				elemPlayers.textContent = "";
 			}
+				
+			if (body.players?.length > 0) {
+				elemPlayersTooltip.classList.remove("empty");
+			} else {
+				elemPlayersTooltip.classList.add("empty");
+			}
+			elemPlayersTooltip.innerHTML = (body.players ?? []).map((player) => 
+				`<tr><td>${player}</td><td><img src="./ping.online.png"/></td></tr>`
+			).join("")
 		},
 		setLoading() {
 			this.setData({ status: STATUS.LOADING }, true)
@@ -62,10 +72,11 @@ function queryWidget(selector, ip) {
 						status: STATUS.ONLINE,
 						playerCount: data.players.online,
 						playerMax: data.players.max,
+						players: data.players.list.map((player) => player.name_clean),
 					})
 				})
 				.catch((err) => {
-					console.err(err)
+					console.error(err)
 					this.setError()
 				})
 		}
@@ -77,6 +88,14 @@ function ServerStatus() {
 	const serverStatus = queryWidget("#widget-server", SERVER_IP);
 	serverStatus.refresh();
 	setInterval(() => serverStatus.refresh(), 30_000);
+	// serverStatus.setData({
+	// 	title: "Custom title",
+	// 	motd: `<span style="color: darkred">Hello?`,
+	// 	status: STATUS.ONLINE,
+	// 	playerCount: 12,
+	// 	playerMax: 32,
+	//	players: ["Luminighty", "Alias01", "LabRa7"],
+	// })
 
 
 	const snackbar = Snackbar("Server IP copied.")

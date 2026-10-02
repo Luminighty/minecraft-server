@@ -33,9 +33,37 @@
 .server-status-meta .status-online {
 	height: 24px;
 	width: auto;
-    image-rendering: pixelated;
+	image-rendering: pixelated;
 }
 
 .server-status-body .server-motd .motd-error {
 	color: darkred;
+}
+
+.server-status .players {
+	position: relative;
+	display: inline-block;
+}
+.server-status .tooltip-text {
+	visibility: hidden;
+	background-color: #000000aa;
+	padding: 5px 5px;
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 105%;
+}
+.server-status .tooltip-text img {
+	height: 16px;
+	width: auto;
+	padding-left: 16px;
+	image-rendering: pixelated;
+}
+.server-status .tooltip-text.empty {
+	visibility: hidden !important;
+}
+
+/* Wtf */
+.server-status:has(.players:hover) .tooltip-text {
+	visibility: visible;
 }
