@@ -1,42 +1,43 @@
 @font-face {
-    font-family: "Minecraftia";
-    src: url("./Minecraftia.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Minecraftia";
+	src: url("../fonts/Minecraftia.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 	line-height: 1.6;
 	/* font-size: 18px; */
 }
 
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("./bg_dirt.png");
-    min-height: 100vh;
-    padding: 20px;
-    gap: 40px;
-    color: #e0e0e0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-image: url("../assets/bg_dirt.png");
+	min-height: 100vh;
+	padding: 20px;
+	gap: 40px;
+	color: #e0e0e0;
 }
 
 /* ===== Flex ===== */
 
 .container {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .container.horizontal {
-    flex-direction: row;
+	flex-direction: row;
 }
 .container.flex-center {
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 .container.flex-align-end {
-    align-items: end;
+	align-items: end;
 }
 .item.flex-grow {
 	flex-grow: 1;
@@ -45,16 +46,16 @@ body {
 /* ===== General Styles ===== */
 
 .paper {
-    max-width: 600px;
-    background: linear-gradient(180deg, #2a2a2a, #1f1f1f);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
-    /* border: 2px solid #3d3d3d; */
-    border-radius: 8px;
-    padding: 30px;
+	max-width: 600px;
+	background: linear-gradient(180deg, #2a2a2a, #1f1f1f);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+	/* border: 2px solid #3d3d3d; */
+	border-radius: 8px;
+	padding: 30px;
 }
 
 a {
-    font-family: monospace;
+	font-family: monospace;
 	font-size: 16px;
 	color: #ffaa00;
 	text-decoration: none;
@@ -89,7 +90,7 @@ p, li {
 }
 
 .img-button {
-    box-shadow: 0 0px 32px #ffaa0088;
+	box-shadow: 0 0px 32px #ffaa0088;
 	border: 8px solid #ffaa0088;
 	box-sizing: border-box;
 	border-radius: 12px;
@@ -99,15 +100,20 @@ p, li {
 	transform: scale(105%) rotate(-2deg);
 }
 .button {
-    font-family: 'Minecraftia', 'Courier New', monospace;
+	font-family: 'Minecraftia', 'Courier New', monospace;
 	padding: 12px 8px;
+	font-weight: bold;
 	border-radius: 4px;
 	cursor: pointer;
 	transition-duration: 0.4s;
+	user-select: none;
 }
 .button:hover {
 	text-decoration: none;
 	transform: scale(105%);
+}
+.button:active {
+	transform: scale(95%);
 }
 .button.download {
 	background: #cc8800;
@@ -120,14 +126,14 @@ p, li {
 
 .footer {
 	color: #666666;
-    font-family: 'Minecraftia', 'Courier New', monospace;
+	font-family: 'Minecraftia', 'Courier New', monospace;
 }
 
 
 /* ===== DataPack ===== */
 
 .dp-title {
-    font-family: monospace;
+	font-family: monospace;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -140,3 +146,4 @@ p, li {
 	color: gray;
 	font-size: 14px;
 }
+

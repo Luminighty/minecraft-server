@@ -5,20 +5,20 @@
 }
 
 .server-status {
-    font-family: 'Minecraftia', 'Courier New', monospace;
-    padding: 5px;
-    width: 80vw;
+	font-family: 'Minecraftia', 'Courier New', monospace;
+	padding: 5px;
+	width: 80vw;
 	max-width: 600px;
 	min-width: 350px;
-    background-color: #00000080;
-    border: 3px solid #aaaaaaaa;
-    cursor: pointer;
+	background-color: #00000080;
+	border: 3px solid #aaaaaaaa;
+	cursor: pointer;
 	user-select: none;
 }
 
 .server-status:hover {
-    background-color: #000000aa;
-    border: 3px solid #aaaaaaff;
+	background-color: #000000aa;
+	border: 3px solid #aaaaaaff;
 }
 
 .server-status-icon,.server-icon {

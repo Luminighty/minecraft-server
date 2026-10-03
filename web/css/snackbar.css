@@ -22,6 +22,7 @@
 		visibility 0s linear 0.5s;
 }
 
+
 .snackbar.show {
 	visibility: visible;
 	opacity: 1;
@@ -33,6 +34,7 @@
 		visibility 0s;
 }
 
+
 .snackbar.hide {
 	visibility: visible;
 	opacity: 0;
@@ -43,3 +45,4 @@
 		transform 0.5s ease,
 		visibility 0s linear 0.5s;
 }
+

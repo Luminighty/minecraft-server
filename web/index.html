@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>VOFI - Minecraft Server</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link href="./styles.css" rel="stylesheet" />
-	<link href="./snackbar.css" rel="stylesheet" />
-	<link href="./server_status.css" rel="stylesheet" />
+	<link href="./css/styles.css" rel="stylesheet" />
+	<link href="./css/snackbar.css" rel="stylesheet" />
+	<link href="./css/server_status.css" rel="stylesheet" />
 	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -17,7 +17,7 @@
 	<div id="widget-server" class="server-status">
 		<div class="container horizontal">
 			<div class="item server-status-icon">
-				<img class="server-icon" src="./server-icon.png" />
+				<img class="server-icon" src="./assets/server-icon.png" />
 			</div>
 			<div class="item flex-grow server-status-body">
 				<div class="server-name">
@@ -27,7 +27,7 @@
 				<div class="server-motd"></div>
 			</div>
 			<div class="item server-status-meta container flex-align-end">
-				<img class="status-online" src="./ping.loading.gif"></img>
+				<img class="status-online" src="./assets/ping.loading.gif"></img>
 				<div class="players">
 					<span class="count"></span>
 					<table class="tooltip-text"></table>
@@ -62,7 +62,7 @@
 			You can pick a bunch of really cool vanilla tweaks and generate a resource pack. Completely optional, but worth taking a look:
 		</p>
 		<a href="https://vanillatweaks.net/picker/resource-packs/" target="_blank">
-			<img class="img-button" src="./vanilla-tweak-resource.png" />
+			<img class="img-button" src="./assets/vanilla-tweak-resource.png" />
 		</a>
 	</div>
 
@@ -126,13 +126,17 @@
 					<span class="dp-title">Universal Dyeing</span>
 					<span class="dp-desc"> Allows you to dye any dyeable block to another color, no matter what color it is (does not include Concrete).</span>
 				</li>
+				<li>
+					<span class="dp-title">Less Structures</span>
+					<span class="dp-desc"> A custom worldgen pack that reduces Ruined Nether Portal and Village spawnrate.</span>
+				</li>
 			<!-- <li><strong></strong> - </li> -->
 		</ul>
 	</div>
 	<div class="footer">What the dog doin?</div>
-	<script src="./config.js"></script>
-	<script src="./helpers.js"></script>
-	<script src="./snackbar.js"></script>
-	<script src="./server_status.js"></script>
+	<script src="./scripts/config.js"></script>
+	<script src="./scripts/helpers.js"></script>
+	<script src="./scripts/snackbar.js"></script>
+	<script src="./scripts/server_status.js"></script>
 </body>
 </html>

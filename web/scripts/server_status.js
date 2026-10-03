@@ -14,9 +14,9 @@ function queryWidget(selector, ip) {
 	const elemPlayersTooltip = widget.querySelector(".players .tooltip-text");
 
 	const ONLINE_MAP = {
-		[STATUS.LOADING]: "./ping.loading.gif",
-		[STATUS.ONLINE]: "./ping.online.png",
-		[STATUS.ERROR]: "./ping.error.png",
+		[STATUS.LOADING]: "./assets/ping.loading.gif",
+		[STATUS.ONLINE]: "./assets/ping.online.png",
+		[STATUS.ERROR]: "./assets/ping.error.png",
 	};
 
 	return {
@@ -38,7 +38,7 @@ function queryWidget(selector, ip) {
 				elemPlayersTooltip.classList.add("empty");
 			}
 			elemPlayersTooltip.innerHTML = (body.players ?? []).map((player) => 
-				`<tr><td>${player}</td><td><img src="./ping.online.png"/></td></tr>`
+				`<tr><td>${player}</td><td><img src="./assets/ping.online.png"/></td></tr>`
 			).join("")
 		},
 		setLoading() {
